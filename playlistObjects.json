@@ -1,0 +1,191 @@
+{
+    "LightRock": {
+        "name": "LightRock",
+        "e": 3,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "Punk": {
+        "name": "Punk",
+        "e": 4,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "Metal": {
+        "name": "Metal",
+        "e": 4,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "RRR": {
+        "name": "RRR1",
+        "e": 3,
+        "c": null,
+        "g": 4,
+        "l": 3
+    },
+    "RRR": {
+        "name": "RRR2",
+        "e": 3,
+        "c": null,
+        "g": 2,
+        "l": 3
+    },
+    "RRR": {
+        "name": "RRR3",
+        "e": 3,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "IndieRock": {
+        "name": "IndieRock",
+        "e": 3,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "ClassicRock": {
+        "name": "ClassicRock",
+        "e": 2,
+        "c": null,
+        "g": 1,
+        "l": 3
+    },
+    "RapBr": {
+        "name": "RapBr",
+        "e": 3,
+        "c": null,
+        "g": 4,
+        "l": 1
+    },
+    "RapInt": {
+        "name": "RapInt",
+        "e": 4,
+        "c": null,
+        "g": 4,
+        "l": 3
+    },
+    "ElectroBr": {
+        "name": "ElectroBr",
+        "e": 4,
+        "c": null,
+        "g": 3,
+        "l": 1
+    },
+    "ElectroChill": {
+        "name": "ElectroChill",
+        "e": 1,
+        "c": null,
+        "g": 3,
+        "l": 3
+    },
+    "ElectroPop": {
+        "name": "ElectroPop",
+        "e": 4,
+        "c": null,
+        "g": 3,
+        "l": 3
+    },
+       "MPB1": {
+        "name": "MPB1",
+        "e": 1,
+        "c": null,
+        "g": null,
+        "l": 1
+    },
+    "MPB2": {
+        "name": "MPB2",
+        "e": 2,
+        "c": null,
+        "g": null,
+        "l": 1
+    },
+    "Chill": {
+        "name": "Chill",
+        "e": 1,
+        "c": null,
+        "g": null,
+        "l": 3
+    },
+    "Sensual": {
+        "name": "Sensual",
+        "e": 2,
+        "c": 1,
+        "g": null,
+        "l": 3
+    },
+    "Sleep": {
+        "name": "Sleep",
+        "e": 1,
+        "c": 1,
+        "g": null,
+        "l": 3
+    },
+    "Study": {
+        "name": "Study",
+        "e": 2,
+        "c": 1,
+        "g": null,
+        "l": 3
+    },
+    "Beach": {
+        "name": "Beach",
+        "e": 2,
+        "c": 2,
+        "g": null,
+        "l": 3
+    },
+    "Walk": {
+        "name": "Walk",
+        "e":3,
+        "c": 1,
+        "g": null,
+        "l": 3
+    },
+    "Hangout": {
+        "name": "Hangout",
+        "e": 3,
+        "c": 2,
+        "g": null,
+        "l": 3
+    },
+    "Cook": {
+        "name": "Cook",
+        "e": 3,
+        "c": 2,
+        "g": null,
+        "l": 3
+    },
+    "fourTwenty": {
+        "name": "fourTwenty",
+        "e": 2,
+        "c": 2,
+        "g": 4,
+        "l": 3
+    },
+    "SOL": {
+        "name": "SOL",
+        "e": 3,
+        "c": 1,
+        "g": null,
+        "l": 3
+    },
+    "Dance": {
+        "name": "Dance",
+        "e": 4,
+        "c": 2,
+        "g": null,
+        "l": 3
+    },
+    "Party": {
+        "name": "Party",
+        "e": 5,
+        "c": 3,
+        "g": 3,
+        "l": 3
+    },
+}

@@ -1,0 +1,230 @@
+<!--
+    #=>Links to add
+    ##=>Questions
+-->
+<!--
+    ID and Class Reference:
+
+    Menu, with 5 divs, leading to 5 pages ==> id="menu" class="menu" id="name_m" 
+    Container for each page ==> id="name"
+    Playlists ==> container id="playlist", div class="playlist", id="playlists_m"
+    Input ==> id="input", div class="input", container class="container"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css"  media="none"
+    onload="if(media!='all')media='all'">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
+    <title>Song Recomendator-IDM222</title>
+</head>
+<body>
+
+        <div id="menu">
+                <div class="menu"><a href="#recomend" id="input_m">Recommend Us a Song</a></div>
+                <div class="menu"><a href="#main" id="reco_m">Need a new song?!</a></div>
+                <div class="menu"><a href="#playlist" id="quest_m">Find Something to Listen</a></div>
+                <div class="menu"><a href="#about" id="about_m">About the website</a></div>
+            </div>
+
+<wrapper class="grid1">
+    
+    <div class="center">
+        <main id="main"><a name="main"></a> 
+            <div class="container" >
+                <h1>HERE IS A SONG FOR YOU</h1>
+                <iframe src="https://open.spotify.com/embed/track/7tlTmoMnm577d9HMNE5ZRo" width="300" height="100" frameborder="0" allowtransparency="true"></iframe>
+                <h1>AND A PLAYLIST WITH MORE SONGS</h1>
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/0i9LY3OQwQYSBPa8X9wZTA" width="300" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </main>
+    </div>
+
+
+    <div id="playlist">
+    <a name="playlist"></a> 
+    <h1 id="openTrigger">Find the perfect playlist for you right now:</h1>
+        <form id=playlistQuiz><!--style="visibility:hidden"-->
+            <div class="radioCointainer" id="energy">
+                <p>How are you feeling right now?</p>
+                <input name="energy" id="energy1" type="radio" value="dead" checked onclick = "getPlaylist()">
+                    <label for="energy1"> I am dead! </label>
+                <input name="energy" id="energy2" type="radio" value="tierd" onclick = "getPlaylist()">
+                    <label for="energy2"> I am tierd... </label>
+                <input name="energy" id="energy3" type="radio" value="chilling" onclick = "getPlaylist()">
+                    <label for="energy3"> I am chillin </label>
+                <input name="energy" id="energy4" type="radio" value="energetic" onclick = "getPlaylist()">
+                    <label for="energy4"> I am feeling energetic! </label>
+                <input name="energy" id="energy5" type="radio" value="hyper" onclick = "getPlaylist();">
+                    <label for="energy5"> I am HYPED!!! </label>
+            </div>
+            <div class=radioContainer id="company">
+                <p>Are you accompanied? </p>
+                <input name="company" id="companyAlone" type="radio" value="alone" onclick="getPlaylist()" checked >
+                <label for="companyAlone"> I am alone right now </label>
+                <input name="company" id="companyFew" type="radio" value="few" onclick="getPlaylist()">
+                <label for="companyFew"> I'm with a ONE or a FEW people </label>
+                <input name="company" id="companyParty" type="radio" value="party" onclick="getPlaylist()">
+                <label for="companyParty"> I'm with a GROUP or party </label>
+            </div>
+            <div class=radioContainer id="genre">
+                    <p>What style of music are feeling right now?</p>
+                    <input name="genre" id="genreRock" type="radio" value="rock" onclick="getPlaylist()" checked>
+                    <input name="genre" id="genreRock" type="radio" value="rock" onclick="getPlaylist()" checked>
+                    <label for="genreRock"> Rock</label>
+                    <input name="genre" id="genreRap" type="radio" value="rap" onclick="getPlaylist()">
+                    <label for="genreRap"> Rap</label>
+                    <input name="genre" id="genreElec" type="radio" value="electronic" onclick="getPlaylist()">
+                    <label for="genreElec"> Electronic </label>
+                    <input name="genre" id="genreReg" type="radio" value="reggae" onclick="getPlaylist()">
+                    <label for="genreReg"> Reggae </label>
+            </div>
+            <div class=radioContainer id="language">
+                    <p>What language do you want to hear music in?</p>
+                    <input name="language" id="lanPT" type="radio" value="pt" onclick="getPlaylist()" checked>
+                    <label for="genreRock"> Portuguese </label>
+                    <input name="language" id="lanENG" type="radio" value="eng" onclick="getPlaylist()">
+                    <label for="genreRap"> English </label>
+                    <input name="language" id="lanINT" type="radio" value="int" onclick="getPlaylist()">
+                    <label for="genreElec"> Mix'em up! #internationalVibes </label>
+            </div>
+        </form>
+
+    <div class="playlistGrid">
+            <div class="playlist" id="LightRock" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/3UrSiP6EZAjcxTIwicHfkx" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Punk" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/66sCWgInHIbrTMcaQiewiv"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Metal" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/1fv31irAmOMFOJCItaGozm"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="RRR" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/51sNuzfn7DnsbUKKdBRXoo" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="IndieRock" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/4GJWPVOhsTTsNQ6omYEDZA" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="ClassicRock" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/3vDiMBDM68Xxf8AnPjJz57"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="RapBr" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/045n33ualpIWxT4ryn8aW2" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="RapInt" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/7rt68ny8PGboGa9fCrLZn9" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="ElectroBr" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/3vDiMBDM68Xxf8AnPjJz57" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="ElectroChill" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/5BRuA0Rg6lSdSKzKTcSs24" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="ElectroPop" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/67bOvJI7W1FcFeuOlHyZr1" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="ReggaeBr" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/1O9j6Jb1LxzvHWCHkbL1av" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist"id="ReggaeInt" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/75H1xBixdFQrB2LrHmXLEh"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist"id="MPB1" style="display:none"><iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/0GNmzL6mKmaD7iO4PQJfjp"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="MPB2" style="display:none"><iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/5OJjgcOCbSztjyN6iNIvqc" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist"id="Chill" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/0i9LY3OQwQYSBPa8X9wZTA" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Sensual" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/4dugl64FwePRQb5OOOJIxx" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Sleep" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/4Cy3HlAelyQaFF8DqJVXAb" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Study" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/3svVm6d9aZo7yUww9X1u8a" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Beach" style="display:none"><iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/0ILimRWj2oMgJWJ5PCtmpK" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Walk" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/7id9SfdqibYcaV3hGgyaVp" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Hangout" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/1qneAfRqyOO46vx7WkvnnT"
+                 width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Cook" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/1z47s9ZLn3pfdCqA6Pu2Gz" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="fourTwenty" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/0Fsu2HN6Ef0jXxBAyMCFyH" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="SOL" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/7xuiDwD8jjkosGgzUN862p" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Dance" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/2PnyscD0f5chSrxkN73xLd" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="playlist" id="Party" style="display:none">
+                <iframe src="https://open.spotify.com/embed/user/1388melzinha/playlist/6Wz3lT0L3N4Hl1HfpHXKle" 
+                width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+    </div>
+
+
+    <div  id="about"><a name="about"></a> 
+        <div id="aboutText">
+            <h2>Why did I create this Website?</h2>
+            <p>I like music a lot, and I know a lot of cool songs. I like showing other humans music I think they might enjoy based on their general taste in music, so they will like me. But my brain is messy, and I am lazy. So, I’ve built a website that will do that work for me, so I will have more time to enjoy my music instead.</p>
+            <h2>How does this website Works?</h2>
+            <p>Friends and random people I meet in life: enjoy the song-recomendator! Based solely on my music taste, this website will be your new homepage. You can always get a fresh new tune in the main page as well as a weekly featured playlist. But if you have already enjoyed all the gems I’ve recommend you let me find you a personalized playlist! Answer some questions about your vibe atm and I’ll find you the perfect playlist to jam to.</p>
+            <h2>Who am I?</h2>
+            <p>Woah! That’s a pretty loaded question… But if you’re impressed with the beautiful design of this website and my great taste in music, well than I am Mel Gross: web-developer, Interactive Digital Major at Drexel University, and artist, and you can find more of my work here: <a href="http://melcgross.net">melgross.net</a></p>
+            <p>However, if you’re not that impressed… why are you still reading this then? Go to a website you actually enjoy…I’m not that impressed with you either…
+            </p>
+        </div>
+        <aside>
+            <h2>My favorite song atm:</h2>
+            <iframe src="https://open.spotify.com/embed/track/3EsmjXE3OAz1MbyQIhFgTv"
+             width="300" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </aside>
+    </div>
+
+
+</wrapper>
+</body>
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+<script src="MyScript.js"></script> 
+  
+</html>
